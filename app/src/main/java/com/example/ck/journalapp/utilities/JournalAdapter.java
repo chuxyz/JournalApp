@@ -28,9 +28,8 @@ public class JournalAdapter extends RecyclerView.Adapter<JournalAdapter.ViewHold
     final private ItemClickListener mItemClickListener;
     private final String TAG = "Chuks";
 
-   // private SimpleDateFormat dateFormat = new SimpleDateFormat(DATE_FORMAT, Locale.getDefault());
+    private SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yy hh:mm a", Locale.getDefault());
 
-    //public JournalAdapter(Context context, List<JournalEntry> journalEntries){
     public JournalAdapter(Context context, ItemClickListener listener){
         mContext = context;
         mItemClickListener = listener;
@@ -38,11 +37,11 @@ public class JournalAdapter extends RecyclerView.Adapter<JournalAdapter.ViewHold
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         // each data item is just a string in this case
-        public TextView mTextView;
-        public TextView mTitleView;
-        public TextView mTimeView;
+        private TextView mTextView;
+        private TextView mTitleView;
+        private TextView mTimeView;
 
-        public ViewHolder(View view) {
+        private ViewHolder(View view) {
             super(view);
             mTitleView = view.findViewById(R.id.rv_journal_title);
             mTextView = view.findViewById(R.id.rv_journal_text);
@@ -70,8 +69,8 @@ public class JournalAdapter extends RecyclerView.Adapter<JournalAdapter.ViewHold
         JournalEntry journalEntry = journalEntries.get(position);
         holder.mTitleView.setText(journalEntry.getJournalTitle());
         holder.mTextView.setText(journalEntry.getJournalText());
-        //String createdOn = dateFormat.format(journalEntry.getCreatedOn());
-        //holder.mTimeView.setText(createdOn);
+        String createdOn = dateFormat.format(journalEntry.getCreatedOn());
+        holder.mTimeView.setText(createdOn);
     }
 
     @Override

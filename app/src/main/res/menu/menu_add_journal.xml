@@ -2,7 +2,8 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 <item android:id="@+id/add_journal"
-      android:title="@string/add_journal"
+      android:title=""
+      android:icon="@drawable/ic_save_black_24dp"
       android:orderInCategory="1"
       app:showAsAction="ifRoom"
     />

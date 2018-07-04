@@ -1,8 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-<item android:id="@+id/create_journal"
-      android:orderInCategory="1"
-      android:title="@string/create_journal"
-      app:showAsAction="ifRoom"/>
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ListJournalsActivity">
+    <item android:id="@+id/user"
+        android:orderInCategory="1"
+        android:icon="@drawable/ic_person_black_24dp"
+        android:title=""
+        app:showAsAction="never"
+        />
+    <item
+        android:id="@+id/logout"
+        android:orderInCategory="1"
+        android:icon="@drawable/ic_power_settings_new_black_24dp"
+        android:title="@string/logout"
+        app:showAsAction="never"
+        />
 </menu>

@@ -12,7 +12,7 @@ import java.util.List;
 
 @Dao
 public interface JournalDao {
-    @Query("SELECT * FROM journals ORDER BY created_on")
+    @Query("SELECT * FROM journals ORDER BY created_on DESC")
     LiveData<List<JournalEntry>> loadAllJournal();
 
     @Query("SELECT * FROM journals WHERE id = :id")

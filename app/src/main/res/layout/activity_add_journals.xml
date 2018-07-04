@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,27 +11,73 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <EditText
+        <LinearLayout
+            android:id="@+id/time_wrapper"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/journal_title"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:textSize="20sp"
-            android:padding="10dp"
-            android:hint="Title"
+            android:background="@color/time_display_layout"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+        <TextView
+            android:id="@+id/time_info"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:layout_gravity="start"
+            android:text="@string/time_info_text"
             />
 
+            <TextView
+            android:id="@+id/time_display"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:layout_gravity="end"
+            android:gravity="end"
+            />
+        </LinearLayout>
+
         <EditText
-            android:id="@+id/journal_text"
+            android:id="@+id/journal_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:hint="@string/title"
+            android:inputType="text"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:background="@color/journalTitleBg"
+            />
+
+        <com.example.ck.journalapp.utilities.LinedEditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="top"
+            android:id="@+id/journal_text"
+            android:layout_gravity="top"
             android:background="@android:color/transparent"
-            android:hint="Type Journal Here..."
-            android:padding="10dp"
-            android:textSize="20sp"/>
+            android:ems="10"
+            android:gravity="top"
+            android:hint="@string/title"
+            android:inputType="textMultiLine"
+            android:lineSpacingExtra="4dp"
+            android:textColor="@color/black"
+            android:padding="8dp"
+            android:textColorHint="@color/textHint"
+            />
 
     </LinearLayout>
 
-</android.support.constraint.ConstraintLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fb_create_journal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:tint="@android:color/white"
+        app:srcCompat="@drawable/ic_create_white_24dp"
+        app:backgroundTint="@color/fabTint"
+        tools:ignore="VectorDrawableCompat"
+        android:visibility="gone"/>
+
+</FrameLayout>

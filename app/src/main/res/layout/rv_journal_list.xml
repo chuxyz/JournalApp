@@ -4,14 +4,27 @@
     android:layout_height="wrap_content"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="horizontal"
-    android:paddingBottom="4dp"
-    android:paddingLeft="16dp"
+    android:paddingBottom="1dp"
+    android:paddingLeft="0dp"
+    android:paddingStart="0dp"
     android:paddingRight="16dp"
-    android:paddingTop="8dp"
-    android:background="?android:attr/selectableItemBackground"
+    android:paddingEnd="16dp"
+    android:paddingTop="1dp"
+    android:layout_margin="2dp"
+    android:background="@drawable/list_border"
     android:clickable="true"
     android:focusable="true"
+    android:baselineAligned="false"
     tools:context=".ListJournalsActivity">
+
+    <LinearLayout
+        android:layout_width="4dp"
+        android:layout_height="match_parent"
+        android:background="@color/emphasis"
+        android:layout_marginRight="8dp"
+        android:layout_marginEnd="8dp">
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="0dp"
@@ -22,21 +35,28 @@
         <TextView
             android:id="@+id/rv_journal_title"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="24sp"
-            android:textStyle="bold"/>
+            android:layout_height="25dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            android:maxLines="1"/>
 
         <TextView
             android:id="@+id/rv_journal_text"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="20sp"/>
+            android:layout_height="50dp"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:ellipsize="end"
+            android:maxLines="2"
+            />
 
         <TextView
             android:id="@+id/rv_joournal_createdOn"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="14sp"/>
+            android:layout_height="15dp"
+            android:textSize="12sp"
+            android:textColor="@color/darkGrey6"/>
 
     </LinearLayout>
 </LinearLayout>

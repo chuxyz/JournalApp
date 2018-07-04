@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#8E44AD</color>
-    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimary">#37474F</color>
+    <color name="colorPrimaryDark">#000000</color>
     <color name="colorAccent">#4885ed</color>
     <!--<color name="colorAccent">#FF4081</color>-->
+    <color name="fabTint">#536DFE</color>
+    <color name="time_display_layout">#FFFFE0</color>
+    <color name="black">#000000</color>
+    <color name="journalTitleBg">#F4F4F4</color>
+    <color name="textHint">#e2e2e2</color>
+    <color name="emphasis">#536DFE</color>
+    <color name="darkGrey6">#666666</color>
+    <color name="listBg">#ECEFF1</color>
+    <color name="listBorder">#CCCCCC</color>
 </resources>

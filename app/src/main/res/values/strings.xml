@@ -2,10 +2,13 @@
     <string name="app_name">Journal App</string>
     <string name="et_hint_email">Email</string>
     <string name="et_hint_pwd">Password</string>
-    <string name="btn_google_signin">Sign-in with google</string>
+    <string name="btn_google_signin">SignIn With Google</string>
     <string name="android_client_id">677442134312-blstsr5os9fvh32ps8ff1plr79qlvpi8.apps.googleusercontent.com</string>
     <string name="web_client_id">677442134312-q9njhj7ecfo3vv5pkafon4a9alslahia.apps.googleusercontent.com</string>
     <string name="title_activity_list_journals">ListJournals</string>
     <string name="create_journal">NEW</string>
     <string name="add_journal">SAVE</string>
+    <string name="logout">Sign Out</string>
+    <string name="time_info_text">Last edited on:</string>
+    <string name="title">Title</string>
 </resources>

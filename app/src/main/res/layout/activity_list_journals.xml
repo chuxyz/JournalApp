@@ -1,26 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ListJournalsActivity">
+    android:fitsSystemWindows="true">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/rv_journal"
+    <FrameLayout
+        android:id="@+id/rv_wrapper"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:clipToPadding="false"
-        android:paddingBottom="80dp"
-        />
+        android:visibility="gone">
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fb_add_journal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="16dp"
-        android:tint="@android:color/white"
-        app:srcCompat="@android:drawable/ic_input_add"
-        app:backgroundTint="#F1C40F"/>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_journal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingBottom="80dp"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:paddingTop="2dp" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fb_add_journal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="16dp"
+            android:tint="@android:color/white"
+            app:backgroundTint="@color/fabTint"
+            app:srcCompat="@android:drawable/ic_input_add" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/signIn_wrapper"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/google_sign_in_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:padding="10dp"
+            android:text="@string/btn_google_signin" />
+    </LinearLayout>
+
 </FrameLayout>
