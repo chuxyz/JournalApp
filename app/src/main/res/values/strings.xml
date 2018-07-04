@@ -11,4 +11,6 @@
     <string name="logout">Sign Out</string>
     <string name="time_info_text">Last edited on:</string>
     <string name="title">Title</string>
+    <string name="welcome1">Welcome</string>
+    <string name="prompt">Sign In to start penning down your thoughts</string>
 </resources>

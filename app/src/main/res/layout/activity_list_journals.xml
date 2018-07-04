@@ -41,6 +41,25 @@
         android:orientation="vertical"
         android:padding="20dp">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome1"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="40sp"
+            android:layout_marginBottom="6dp"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/journal_main" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/prompt"
+            android:textColor="@color/black"
+            android:textStyle="bold|italic"
+            android:layout_marginTop="6dp"/>
         <com.google.android.gms.common.SignInButton
             android:id="@+id/google_sign_in_button"
             android:layout_width="match_parent"
